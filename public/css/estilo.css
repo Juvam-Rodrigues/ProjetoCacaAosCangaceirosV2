@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "fonteTitulo";
+    src: url("../fontes/VCR_OSD_MONO_1.001.ttf");
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: fonteJogo;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas {
+    width: 65%;
+}
+
+#telaGame {
+    width: 100%;
+    padding-top: 56.25%;
+    /* Ajusta a o conteúdo sendo 56.25% da largura*/
+    background-size: contain;
+    /* Ajusta a imagem ao tamanho da div*/
+    background-image: url(../images/CUTSCENES.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#telaGame:hover {
+    cursor: url(../images/Ponteiro.cur), pointer;
+}
+
+#placar {
+    display: flex;
+    justify-content: center;
+}
+
+#vidas {
+    margin-left: 12%;
+}
+
+#placar div {
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    width: 10%;
+    height: 5%;
+    border-radius: 10px;
+    border: 2px solid rgb(68, 68, 68);
+}
+
+#placar div h3 {
+    margin: 0%;
+    padding: 0%;
+    margin-right: 2%;
+}
+
+span {
+    padding-top: 3px;
+}
+
+#alvo {
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    /* Trabalhando com porcentagem para ficar responsivo*/
+}
+
+#telaGameOver h1 {
+    font-size: 4em;
+}
+
+#caixaTitulo {
+    text-align: left;
+    background-color: #EDD14C;
+    padding: 1%;
+    display: flex;
+}
+
+.conteudoNav {
+    margin-left: 10%;
+    border: 1px solid black;
+    text-decoration: none;
+    color: #EDD14C;
+    font-size: 20px;
+    padding: 1%;
+    border-radius: 12px;
+    background-color: white;
+    font-family: fonteTitulo;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+
+}
+
+.conteudoNav:hover {
+    background-color: #A35105;
+    color: white;
+    font-family: fonteTitulo;
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+
+}
+
+#logo {
+    background-color: white;
+    border: 2px solid black;
+    margin-left: 1%;
+}
+
+footer {
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDD14C;
+    font-size: 15px;
+    padding: 2%;
+}
+
+.creditos {
+    margin-left: 2%;
+}
+
+nav {
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+#cabecalho h3 {
+    margin-top: 2%;
+    font-family: fonteTitulo;
+    margin-bottom: 1%;
+    color: #A35105;
+    font-size: 40px;
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+
+}
+
+#divVida {
+    align-items: center;
+    justify-content: left;
+    background-color: #EDD14C;
+}
+
+header {
+    align-items: center;
+}
+
+#dicas {
+    margin-top: 2%;
+    font-family: fonteTitulo;
+    background-color: #A35105;
+    padding: 1%;
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+#divDicas {
+    display: flex;
+    justify-content: center;
+}
+
+.placarTxt {
+    font-size: 1.2vw;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    /*define a separação entre as bordar*/
+    padding: 2vw;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}
+
+#divTable {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+dialog {
+    margin: auto;
+    padding: 5vw;
+    border-radius: 10px;
+}
+
+dialog>form>input {
+    margin-bottom: 10%;
+    padding: 2%;
+    border: gray solid 2px;
+    border-radius: 6px;
+}
+
+dialog>form>label {
+    margin-bottom: 10%;
+}
+
+dialog>form>a {
+    background-color: #007bff;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    text-decoration: none;
+    /* Remova a formatação de link padrão */
+    border-radius: 5px;
+    border: black solid 1px;
+    /* Cantos arredondados */
+    padding: 2%;
+
+}
+dialog>form>a:hover {
+    background-color: #0abe40;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    text-decoration: none;
+    /* Remova a formatação de link padrão */
+    border-radius: 5px;
+    border: black solid 1px;
+    /* Cantos arredondados */
+    padding: 2%;
+
+}
+table tr:nth-child(-n+3) {
+    background-color: #ffcc00; /* Define a cor de fundo desejada */
+}
+table thead tr td{
+    background-color: #EDD14C;
+}
