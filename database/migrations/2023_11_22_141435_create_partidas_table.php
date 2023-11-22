@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('acertos');
-            $table->bigInteger('erros');
+            $table->integer('acertos');
+            $table->integer('erros');
             $table->string('data_atual', 100);
             $table->string('tempo_atual', 100);
             $table->foreIgnId('jogador_id') -> constrained();
