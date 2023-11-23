@@ -11,10 +11,11 @@ class JogadorController extends Controller
     {
         $nome = $request->nome;
         $email = $request->email;
+        
         $senha = $request->senha;
         $confirmacao = $request->confirmacao;
 
-        $novo = Jogador::criarUsuario($nome, $email, $senha, $confirmacao);
+        $novo = Jogador::criarUsuario($nome, $senha, $confirmacao, $email);
 
         if ($novo == null) {
             return redirect("/registro")->with('msg', 'Dados inseridos incorretamente.');

@@ -14,14 +14,22 @@ class Jogador extends Model
     protected $fillable = ['nome', 'email', 'senha'];
     protected $hidden = ['senha'];
 
-    public static function criarUsuario($nome, $senha, $repetirSenha, $email){
-        if($senha == $repetirSenha){
+    public static function criarUsuario($nome, $senha, $repetirSenha, $email)
+    {
+        if ($senha == $repetirSenha) {
+            // Criptografar a senha usando Hash::make
+            $senhaCriptografada = Hash::make($senha);
+    
             $jogador = new Jogador([
-                'nome' => $nome, 'senha' => $senha, 'email' => $email
+                'nome' => $nome,
+                'senha' => $senhaCriptografada,
+                'email' => $email
             ]);
+    
             $jogador->save();
             return $jogador;
         }
+    
         return null;
     }
 

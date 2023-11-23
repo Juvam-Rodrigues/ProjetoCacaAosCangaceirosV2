@@ -1,15 +1,3 @@
-<?php
-// Conexão com o banco 
-$hostname = 'localhost';
-$username = 'root';
-$password = 'Juvam20041103';
-$database = 'cangaceiros_db';
-
-$pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
-
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

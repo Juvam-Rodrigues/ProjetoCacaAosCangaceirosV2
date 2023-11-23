@@ -31,7 +31,7 @@
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <input type="email" name="email" id="email" placeholder="Digite seu email">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-                <input type="password" name="confirmacao" id="senha-novamente" placeholder="Digite sua senha novamente">
+                <input type="password" name="confirmacao" id="confirmacao" placeholder="Digite sua senha novamente">
                 <button type="submit">Cadastrar</button>
             </form>
 

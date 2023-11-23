@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PartidaController extends Controller
 {
-    public function partida(){
-        return view("index");
+    public function exibir(){
+        return view("partida/index");
     }
 }

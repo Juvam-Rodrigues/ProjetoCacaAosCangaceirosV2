@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JogadorController;
+use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\SessoesController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,9 @@ Route::post('/logar', [SessoesController::class, 'create']);
 
 Route::post('/registro', [JogadorController::class, 'create']);
 Route::get('/registro', [JogadorController::class, 'new']);
+
+Route::get('/partidas', [PartidaController::class, 'exibir']);
+
 
 
 
