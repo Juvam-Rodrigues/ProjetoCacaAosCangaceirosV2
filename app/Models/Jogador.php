@@ -16,11 +16,11 @@ class Jogador extends Model
 
     public static function criarUsuario($nome, $senha, $repetirSenha, $email){
         if($senha == $repetirSenha){
-            $e = new Jogador([
+            $jogador = new Jogador([
                 'nome' => $nome, 'senha' => $senha, 'email' => $email
             ]);
-            $e->save();
-            return $e;
+            $jogador->save();
+            return $jogador;
         }
         return null;
     }

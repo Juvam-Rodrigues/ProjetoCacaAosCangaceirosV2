@@ -20,7 +20,9 @@ class JogadorController extends Controller
             return redirect("/registro")->with('msg', 'Dados inseridos incorretamente.');
         } else {
             return redirect("/")->with('msg', 'Conta criada com sucesso, logue normalmente.');
-            ;
         }
+    }
+    public function new() {
+        return view("jogador/registro");
     }
 }
