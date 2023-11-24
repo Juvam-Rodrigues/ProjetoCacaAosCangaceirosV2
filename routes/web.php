@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SessoesController::class, 'new']);
+Route::get('/deslogar', [SessoesController::class, 'back']);
 Route::post('/logar', [SessoesController::class, 'create']);
 
 Route::post('/registro', [JogadorController::class, 'create']);

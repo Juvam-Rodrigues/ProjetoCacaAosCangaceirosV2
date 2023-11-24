@@ -13,6 +13,10 @@ let gameOver = false;
 let mostrou = false;
 let audioTiro = new Audio("../sons/SomDeTiro.mp3");
 
+let botaoSubMenu = document.getElementById("submenu-trigger");
+let submenu =  document.getElementById("submenu");
+let apertouMenu = false;
+
 //Pegando o nome da pessoa
 let inputNome = document.getElementById("nome");
 
@@ -65,6 +69,17 @@ setInterval(() => {
         mostrou = true;
     }
 }, 1000);
+
+botaoSubMenu.onclick = function(){
+    if(apertouMenu == false){
+        submenu.style.display = "block";
+        apertouMenu = true;
+    }
+    else{
+        submenu.style.display = "none";
+        apertouMenu = false;
+    }
+}
 
 alvo.onmousedown = () => {
     estaClicado = true;

@@ -228,6 +228,7 @@ dialog>form>a {
     padding: 2%;
 
 }
+
 dialog>form>a:hover {
     background-color: #0abe40;
     /* Cor de fundo do botão */
@@ -241,9 +242,46 @@ dialog>form>a:hover {
     padding: 2%;
 
 }
+
 table tr:nth-child(-n+3) {
-    background-color: #ffcc00; /* Define a cor de fundo desejada */
+    background-color: #ffcc00;
+    /* Define a cor de fundo desejada */
 }
-table thead tr td{
+
+table thead tr td {
     background-color: #EDD14C;
+}
+
+.submenu-trigger {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.submenu a {
+    display: block;
+    font-family: fonteTitulo;
+    padding: 10px;
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.submenu a:hover {
+    border-radius: 12px;
+    background-color: #f0f0f0;
+}
+.submenu-trigger span{
+    font-family: fonteTitulo;
 }

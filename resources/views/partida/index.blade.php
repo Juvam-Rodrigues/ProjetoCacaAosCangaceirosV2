@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de atirar</title>
-    <link rel="stylesheet" href="{{asset('css/estilo.css')}}">
-    <script src="{{asset('js/script.js')}}" defer></script>
+    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
+    <script src="{{ asset('js/script.js') }}" defer></script>
     <link rel="shortcut icon" href="../../public/images/Ponteiro.png" type="image/x-icon" />
 </head>
 
@@ -18,6 +17,12 @@
         <a href="index.blade.php" class="btn conteudoNav">Jogo</a>
         <a href="prejogo.blade.html" class="btn conteudoNav">Enredo do jogo</a>
         <a href="tabela.blade.php" class="btn conteudoNav">Ranking</a>
+        <div class="submenu-trigger btn conteudoNav" id="submenu-trigger">
+            <span> {{ session()->get('jogador')->nome }} </span>
+            <div class="submenu" id="submenu">
+                <a href="/deslogar">Deslogar</a>
+            </div>
+        </div>
     </header>
 
     <nav>
