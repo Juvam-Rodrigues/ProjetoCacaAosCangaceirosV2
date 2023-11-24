@@ -88,7 +88,7 @@ span {
     display: flex;
 }
 
-.conteudoNav {
+.conteudoHeader {
     margin-left: 10%;
     border: 1px solid black;
     text-decoration: none;
@@ -103,7 +103,7 @@ span {
 
 }
 
-.conteudoNav:hover {
+.conteudoHeader:hover {
     background-color: #A35105;
     color: white;
     font-family: fonteTitulo;
