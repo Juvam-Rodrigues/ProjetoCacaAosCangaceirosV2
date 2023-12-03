@@ -30,8 +30,8 @@
                 {{ csrf_field() }}
 
                 <h1>Login</h1>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                 <button type="submit" id="enviar">Entrar</button>
             </form>
     </div>

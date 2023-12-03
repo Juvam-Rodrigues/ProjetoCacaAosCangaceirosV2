@@ -29,10 +29,10 @@
         <form action="/registro" method="post" id="formlogin" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h1>Registro</h1>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-            <input type="email" name="email" id="email" placeholder="Digite seu email">
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-            <input type="password" name="confirmacao" id="confirmacao" placeholder="Digite sua senha novamente">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            <input type="password" name="confirmacao" id="confirmacao" placeholder="Digite sua senha novamente" required>
             <button type="submit" id="enviar">Cadastrar</button>
         </form>
 
