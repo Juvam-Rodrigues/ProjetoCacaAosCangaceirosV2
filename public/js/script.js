@@ -17,9 +17,6 @@ let botaoSubMenu = document.getElementById("submenu-trigger");
 let submenu =  document.getElementById("submenu");
 let apertouMenu = false;
 
-//Pegando o nome da pessoa
-let inputNome = document.getElementById("nome");
-
 
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;
@@ -155,7 +152,6 @@ window.onload = function () {
     startTempo(duracao, telaDeTempo);
 }
 botaoEnvio.onclick = function () {
-    var nome = inputNome.value
-    document.location.href = "../bancoDeDados/arquivo.php?nome=" + nome + "&erros=" + erros + "&acertos=" + acertos;
+    document.location.href = "../../Models/Jogador.php?nome=" + nome + "&erros=" + erros + "&acertos=" + acertos;
 }
 
