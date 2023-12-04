@@ -62,7 +62,15 @@ class Jogador extends Model
     }
 
     //PARTIDA
-    public function criarPartida($acertos, $erros, $dataAtual, $tempoAtual){   
+    public function criarPartida($acertos, $erros){   
+        $timezone = new DateTimeZone('America/Sao_Paulo');
+        $agora = new DateTime('now', $timezone);
+        $agoraFormatado = $agora->format('d/m/Y H:i');
+
+        $array = explode(' ', $agoraFormatado);
+        $dataAtual = $array[0];
+        $tempoAtual = $array[1];
+
         $partida = new Partida(['acertos' => $acertos , 'erros' => $erros, 'data_atual' => $dataAtual, 'tempo_atual' => $tempoAtual]);
         $this->partidas()->save($partida);
     }

@@ -53,13 +53,6 @@
         </div>
     </nav>
 
-    <dialog>
-        <form action="" method="get">
-            <label for="nome">Nome do(a) jogador(a):</label>
-            <input type="text" id="nome" name="nome" required><br>
-            <a href="#" id="botaoEnvio">Enviar</a>
-        </form>
-    </dialog>
 
     <div id="container">
         <div id="canvas">

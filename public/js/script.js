@@ -1,7 +1,6 @@
 let alvo = document.getElementById("alvo");
 let telaGame = document.getElementById("telaGame");
 let telaVida = document.getElementById("vidas");
-let modal = document.querySelector("dialog");
 let placaAcertos = document.getElementById("acertos");
 let placaErros = document.getElementById("erros");
 let placaJogadas = document.getElementById("jogadas");
@@ -10,7 +9,6 @@ let botaoEnvio = document.getElementById("botaoEnvio");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
-let mostrou = false;
 let audioTiro = new Audio("../sons/SomDeTiro.mp3");
 
 let botaoSubMenu = document.getElementById("submenu-trigger");
@@ -52,6 +50,8 @@ setInterval(() => {
 
         }
     } else {
+        document.location.href = "/save?erros=" + erros + "&acertos=" + acertos;
+
         alvo.onclick = function () {
             alvo.style.display = "block";
         };
@@ -59,11 +59,6 @@ setInterval(() => {
     if (vidas <= 0) {
         gameOver = true;
         dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
-
-        if (!mostrou) {
-            modal.showModal();
-        }
-        mostrou = true;
     }
 }, 1000);
 
@@ -130,11 +125,6 @@ function startTempo(duracao, telaDeTempo) {
             gameOver = true;
             tempo = 0;
             dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
-
-            if (!mostrou) {
-                modal.showModal();
-            }
-            mostrou = true;
         }
         if (vidas <= 0) {
             pararTempo();
@@ -152,6 +142,5 @@ window.onload = function () {
     startTempo(duracao, telaDeTempo);
 }
 botaoEnvio.onclick = function () {
-    document.location.href = "../../Models/Jogador.php?nome=" + nome + "&erros=" + erros + "&acertos=" + acertos;
 }
 
