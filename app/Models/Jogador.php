@@ -59,7 +59,7 @@ class Jogador extends Model
     
     //RELACIONAMENTO UM PARA MUITOS
     public function partidas():HasMany{
-        return $this->hasMany(Partida::class, 'partidas');
+        return $this->hasMany(Partida::class);
     }
 
     //PARTIDA
@@ -67,7 +67,6 @@ class Jogador extends Model
         $timezone = new DateTimeZone('America/Sao_Paulo');
         $agora = new \DateTime('now', $timezone);
         $agoraFormatado = $agora->format('d/m/Y H:i');
-
         $array = explode(' ', $agoraFormatado);
         $dataAtual = $array[0];
         $tempoAtual = $array[1];

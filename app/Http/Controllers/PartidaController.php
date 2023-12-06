@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Jogador;
+use Illuminate\Support\Facades\Session;
+
 
 use Illuminate\Http\Request;
 
@@ -10,11 +11,19 @@ class PartidaController extends Controller
     public function exibir(){
         return view("partida/index");
     }
+    public function exibirPreJogo(){
+        return view("partida/prejogo");
+    }
 
     public function save(Request $request)
     {
-        
-            $jogador->criarPartida($request->query('acertos'), $request->query('erros'));
+        $jogador = Session::get('jogador');
+
+        if($jogador != null){
+            $acertos = (int) $request->route('acertos');
+            $erros = (int) $request->route('erros');
+            $jogador->criarPartida($acertos, $erros);
             return redirect("/partidas");
+        }
     }
 }

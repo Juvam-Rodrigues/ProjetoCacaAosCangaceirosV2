@@ -14,8 +14,8 @@
 <body>
     <header id="caixaTitulo">
         <img src="images/Caça aos cangaceiros.png" width="300px" height="150px" id="logo">
-        <a href="index.blade.php" class="btn conteudoHeader">Jogo</a>
-        <a href="prejogo.blade.html" class="btn conteudoHeader">Enredo do jogo</a>
+        <a href="/partidas" class="btn conteudoHeader">Jogo</a>
+        <a href="/prejogo" class="btn conteudoHeader" id="enredobtn">Enredo do jogo</a>
         <a href="tabela.blade.php" class="btn conteudoHeader">Ranking</a>
         <div class="submenu-trigger btn conteudoHeader" id="submenu-trigger">
             <span> {{ session()->get('jogador')->nome }} </span>

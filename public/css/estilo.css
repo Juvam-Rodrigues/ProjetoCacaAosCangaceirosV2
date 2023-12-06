@@ -117,6 +117,10 @@ span {
     border: 2px solid black;
     margin-left: 1%;
 }
+#enredobtn{
+    text-align: center;
+    margin-top: 2%;
+}
 
 footer {
     margin-top: 8%;
@@ -196,51 +200,6 @@ th {
     margin-top: 2%;
     display: flex;
     justify-content: center;
-}
-
-dialog {
-    margin: auto;
-    padding: 5vw;
-    border-radius: 10px;
-}
-
-dialog>form>input {
-    margin-bottom: 10%;
-    padding: 2%;
-    border: gray solid 2px;
-    border-radius: 6px;
-}
-
-dialog>form>label {
-    margin-bottom: 10%;
-}
-
-dialog>form>a {
-    background-color: #007bff;
-    /* Cor de fundo do botão */
-    color: #fff;
-    /* Cor do texto do botão */
-    text-decoration: none;
-    /* Remova a formatação de link padrão */
-    border-radius: 5px;
-    border: black solid 1px;
-    /* Cantos arredondados */
-    padding: 2%;
-
-}
-
-dialog>form>a:hover {
-    background-color: #0abe40;
-    /* Cor de fundo do botão */
-    color: #fff;
-    /* Cor do texto do botão */
-    text-decoration: none;
-    /* Remova a formatação de link padrão */
-    border-radius: 5px;
-    border: black solid 1px;
-    /* Cantos arredondados */
-    padding: 2%;
-
 }
 
 table tr:nth-child(-n+3) {

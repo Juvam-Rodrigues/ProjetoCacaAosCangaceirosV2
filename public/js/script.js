@@ -5,7 +5,6 @@ let placaAcertos = document.getElementById("acertos");
 let placaErros = document.getElementById("erros");
 let placaJogadas = document.getElementById("jogadas");
 let dicas = document.getElementById("dicas");
-let botaoEnvio = document.getElementById("botaoEnvio");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
@@ -138,7 +137,5 @@ window.onload = function () {
     var duracao = 90 * 1; //Conversão de tempo para segundos
     var telaDeTempo = document.querySelector("#telaTempo");
     startTempo(duracao, telaDeTempo);
-}
-botaoEnvio.onclick = function () {
 }
 

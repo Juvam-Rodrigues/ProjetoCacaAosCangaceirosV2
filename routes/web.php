@@ -24,6 +24,7 @@ Route::post('/registro', [JogadorController::class, 'create']);
 Route::get('/registro', [JogadorController::class, 'new']);
 
 Route::get('/partidas', [PartidaController::class, 'exibir']);
+Route::get('/prejogo', [PartidaController::class, 'exibirPreJogo']);
 
 Route::get('/save/{acertos}/{erros}', [PartidaController::class, 'save'])->name('save');
 

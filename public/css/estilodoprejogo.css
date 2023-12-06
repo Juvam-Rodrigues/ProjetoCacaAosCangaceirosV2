@@ -15,7 +15,8 @@
     display: flex;
 }
 
-.conteudoNav{
+
+.conteudoHeader{
     margin-left: 10%;
     border: 1px solid black;
     text-decoration: none;
@@ -28,7 +29,7 @@
     text-shadow: 0px 1px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
     
 }
-.conteudoNav:hover{
+.conteudoHeader:hover{
     background-color: #A35105;
     color: white;
     font-family: fonteTitulo;
@@ -39,7 +40,7 @@
     background-color: white;
     border: 2px solid black;
 }
-#enredo{
+#enredo, #enredobtn{
     text-align: center;
     margin-top: 2%;
 }
@@ -47,6 +48,8 @@
     font-family: fonteTitulo;
 
 }
+
+
 .articlePersonagens{
     display: flex;
     margin-top: 3%;
@@ -89,5 +92,41 @@ footer{
 }
 header{
     align-items: center;
+}
+.submenu-trigger {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+.submenu-trigger:hover{
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.submenu a {
+    display: block;
+    font-family: fonteTitulo;
+    padding: 10px;
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.submenu a:hover {
+    border-radius: 12px;
+    background-color: #f0f0f0;
+}
+.submenu-trigger span{
+    font-family: fonteTitulo;
 }
 

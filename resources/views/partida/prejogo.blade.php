@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caça aos cangaceiros</title>
-    <link rel="stylesheet" href="css/estilodoprejogo.css">
+    <link rel="stylesheet" href="{{ asset('css/estilodoprejogo.css') }}">
+    <script src="{{ asset('js/script.js') }}" defer></script>
     <link rel="shortcut icon" href="images/Ponteiro.png" type="image/x-icon" />
 </head>
 
@@ -14,9 +15,15 @@
 <body>
     <header id="caixaTitulo">
         <img src="images/Caça aos cangaceiros.png" width="300px" height="150px" id="logo">
-        <a href="index.php" class="btn conteudoNav">Jogo</a>
-        <a href="prejogo.html" class="btn conteudoNav">Enredo do jogo</a>
-        <a href="tabela.php" class="btn conteudoNav">Ranking</a>
+        <a href="/partidas" class="btn conteudoHeader">Jogo</a>
+        <a href="/prejogo" class="btn conteudoHeader" id="enredobtn">Enredo do jogo</a>
+        <a href="tabela.blade.php" class="btn conteudoHeader">Ranking</a>
+        <div class="submenu-trigger btn conteudoHeader" id="submenu-trigger">
+            <span> {{ session()->get('jogador')->nome }} </span>
+            <div class="submenu" id="submenu">
+                <a href="/deslogar">Deslogar</a>
+            </div>
+        </div>
     </header>
 
     <div id="enredo">
