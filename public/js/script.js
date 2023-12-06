@@ -23,6 +23,7 @@ let larguraTela = document.getElementById("telaGame").clientWidth;
 let alturaAlvo = document.getElementById("alvo").clientHeight;
 let larguraAlvo = document.getElementById("alvo").clientWidth;
 
+var parametrosConsulta = 'acertos=' + encodeURIComponent(acertos) + '&erros=' + encodeURIComponent(erros);
 
 setInterval(() => {
     if (!gameOver) {
@@ -50,8 +51,7 @@ setInterval(() => {
 
         }
     } else {
-        document.location.href = "/save?erros=" + erros + "&acertos=" + acertos;
-
+        document.location.href = '/save?' + parametrosConsulta;
         alvo.onclick = function () {
             alvo.style.display = "block";
         };

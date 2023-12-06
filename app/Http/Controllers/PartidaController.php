@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Jogador;
 
 use Illuminate\Http\Request;
 
@@ -9,15 +10,14 @@ class PartidaController extends Controller
     public function exibir(){
         return view("partida/index");
     }
-    public function save(string $acertos, string $erros)
+    public function save(Request $request)
     {
-        return response()->json([
-            'acertos' => $cidade,
-            'erros' => $erros
-        ]);
-        $jogador = Session::get('jogador');
-        
-        $jogador::criarPartida($acertos, $erros);
-
+        $jogador_id = $request->jogador_id;
+        $jogador = Jogador::find($jogador_id);
+        if ($jogador != null)
+        {
+            $jogador->criarPartida($request->query('acertos'), $request->query('erros'));
+            return redirect("/partidas");
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DateTimeZone;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -64,7 +65,7 @@ class Jogador extends Model
     //PARTIDA
     public function criarPartida($acertos, $erros){   
         $timezone = new DateTimeZone('America/Sao_Paulo');
-        $agora = new DateTime('now', $timezone);
+        $agora = new \DateTime('now', $timezone);
         $agoraFormatado = $agora->format('d/m/Y H:i');
 
         $array = explode(' ', $agoraFormatado);
