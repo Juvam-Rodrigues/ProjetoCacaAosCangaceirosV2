@@ -23,8 +23,6 @@ let larguraTela = document.getElementById("telaGame").clientWidth;
 let alturaAlvo = document.getElementById("alvo").clientHeight;
 let larguraAlvo = document.getElementById("alvo").clientWidth;
 
-var parametrosConsulta = 'acertos=' + encodeURIComponent(acertos) + '&erros=' + encodeURIComponent(erros);
-
 setInterval(() => {
     if (!gameOver) {
         alvo.style.top = Math.floor(Math.random() * (alturaTela - alturaAlvo)) + "px";
@@ -51,7 +49,7 @@ setInterval(() => {
 
         }
     } else {
-        document.location.href = '/save?' + parametrosConsulta;
+        document.location.href = '/save/' +encodeURIComponent(acertos)+ '/' + encodeURIComponent(erros);
         alvo.onclick = function () {
             alvo.style.display = "block";
         };
