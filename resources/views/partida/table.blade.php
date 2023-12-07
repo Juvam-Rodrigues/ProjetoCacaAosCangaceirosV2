@@ -8,6 +8,8 @@
     <title>Jogo de Caça aos Cangaceiros</title>
     <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/Ponteiro.png') }}" type="image/x-icon" />
+    <script src="{{ asset('js/script.js') }}" defer></script>
+
 </head>
 
 <body>

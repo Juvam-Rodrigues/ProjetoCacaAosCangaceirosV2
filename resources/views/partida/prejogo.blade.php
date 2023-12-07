@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Caça aos Cangaceiros</title>
     <link rel="stylesheet" href="{{ asset('css/estilodoprejogo.css') }}">
-    <script src="{{ asset('js/script.js') }}" defer></script>
     <link rel="shortcut icon" href="{{ asset('images/Ponteiro.png') }}" type="image/x-icon" />
+    <script src="{{ asset('js/script.js') }}" defer></script>
+
 </head>
 
 </head>
