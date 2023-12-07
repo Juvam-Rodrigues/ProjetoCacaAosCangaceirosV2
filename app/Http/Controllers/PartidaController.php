@@ -14,6 +14,10 @@ class PartidaController extends Controller
     public function exibirPreJogo(){
         return view("partida/prejogo");
     }
+    public function exibirRanking(){
+        return view("partida/table");
+    }
+    
 
     public function save(Request $request)
     {

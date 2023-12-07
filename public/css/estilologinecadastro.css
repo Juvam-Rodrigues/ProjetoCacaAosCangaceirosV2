@@ -112,6 +112,7 @@ header {
     border-radius: 5px;
 }
 #enviar:hover{
+    font-weight: bold;
     cursor: pointer;
     background-color: green;
     color: white;
