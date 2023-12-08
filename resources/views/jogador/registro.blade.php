@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/estilologinecadastro.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="{{ asset('js/script.js') }}" defer></script>
+
     <title>Registro</title>
 </head>
 
@@ -20,10 +22,13 @@
 
     <div id="container">
         @if (session()->has('msg'))
-            <div>
-                Dados inseridos incorretamente!
-                <button type="button" class="btn-close p-1 m-0" data-bs-dismiss="alert" aria-label="Close"
-                    style="margin-top: 2px"></button>
+            <div id="divConfirmacaoRegistro">
+                <div id="textoModal">
+                    Dados inseridos incorretamente!
+                </div>
+                <div id="btnModal">
+                    <button onclick="fecharModal()">Fechar</button>
+                </div>
             </div>
         @endif
         <form action="/registro" method="post" id="formlogin" enctype="multipart/form-data">

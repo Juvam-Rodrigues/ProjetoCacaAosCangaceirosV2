@@ -86,7 +86,7 @@ header {
     display: flex;
 }
 
-#formlogin{
+#formlogin {
     padding: 4%;
     display: flex;
     flex-direction: column;
@@ -99,23 +99,61 @@ header {
 #nome,
 #email,
 #senha,
-#enviar, #confirmacao {
+#enviar,
+#confirmacao {
     display: block;
     margin-bottom: 10px;
     height: 30px;
 }
-#enviar{
-    margin: 10px auto; /* Centraliza o botão horizontalmente */
+
+#enviar {
+    margin: 10px auto;
+    /* Centraliza o botão horizontalmente */
     width: 100px;
     background-color: white;
     border: black solid 1px;
     border-radius: 5px;
 }
-#enviar:hover{
+
+#enviar:hover {
     font-weight: bold;
     cursor: pointer;
     background-color: green;
     color: white;
     border: black solid 1px;
     border-radius: 5px;
+}
+
+#divConfirmacaoRegistro {
+    position: fixed;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 6%;   
+}
+
+#btnModal{
+    margin-top: 20px;
+}
+#btnModal button{
+    font-family: "fonteTitulo";
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: red;
+}
+#btnModal button:hover{
+    font-family: "fonteTitulo";
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: green;
+}
+#textoModal{
+    font-family: "fonteTitulo";
+    font-size: 18px;
 }

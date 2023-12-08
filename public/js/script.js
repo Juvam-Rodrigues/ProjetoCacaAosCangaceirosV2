@@ -14,6 +14,9 @@ let botaoSubMenu = document.getElementById("submenu-trigger");
 let submenu =  document.getElementById("submenu");
 let apertouMenu = false;
 
+//Modal
+let divModal = document.getElementById("divConfirmacaoRegistro");
+
 
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;
@@ -139,3 +142,6 @@ window.onload = function () {
     startTempo(duracao, telaDeTempo);
 }
 
+function fecharModal(){
+    divModal.style.display = "none";
+}

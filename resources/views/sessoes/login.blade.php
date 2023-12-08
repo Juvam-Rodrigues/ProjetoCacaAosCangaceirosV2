@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/estilologinecadastro.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="{{ asset('js/script.js') }}" defer></script>
+
     <title>Login</title>
 </head>
 
@@ -19,21 +21,25 @@
     </header>
 
     <div id="container">
-            @if (session()->has('msg'))
-                <div>
+        @if (session()->has('msg'))
+            <div id="divConfirmacaoRegistro">
+                <div id="textoModal">
                     Dados inseridos com sucesso, logue pela primeira vez!
-                    <button type="button" style="margin-top: 2px"></button>
                 </div>
-            @endif
+                <div id="btnModal">
+                    <button onclick="fecharModal()">Fechar</button>
+                </div>
+            </div>
+        @endif
 
-            <form action="/logar" method="POST" id="formlogin">
-                {{ csrf_field() }}
+        <form action="/logar" method="POST" id="formlogin">
+            {{ csrf_field() }}
 
-                <h1>Login</h1>
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                <button type="submit" id="enviar">Entrar</button>
-            </form>
+            <h1>Login</h1>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            <button type="submit" id="enviar">Entrar</button>
+        </form>
     </div>
 
     <footer>
