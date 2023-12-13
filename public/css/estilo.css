@@ -64,9 +64,6 @@ h1 {
     margin-right: 2%;
 }
 
-span {
-    padding-top: 3px;
-}
 
 #alvo {
     top: 0%;
@@ -88,7 +85,7 @@ span {
     display: flex;
 }
 
-.conteudoHeader {
+.conteudoHeader{
     margin-left: 10%;
     border: 1px solid black;
     text-decoration: none;
@@ -98,17 +95,14 @@ span {
     border-radius: 12px;
     background-color: white;
     font-family: fonteTitulo;
-    text-shadow: 0px 1px 0px rgb(0, 0, 0);
-    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
-
+    text-shadow: 0px 1px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    
 }
-
-.conteudoHeader:hover {
+.conteudoHeader:hover{
     background-color: #A35105;
     color: white;
     font-family: fonteTitulo;
-    text-shadow: 0px 2px 0px rgb(0, 0, 0);
-    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    text-shadow: 0px 2px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
 
 }
 
@@ -116,10 +110,6 @@ span {
     background-color: white;
     border: 2px solid black;
     margin-left: 1%;
-}
-#enredobtn{
-    text-align: center;
-    margin-top: 2%;
 }
 
 footer {
@@ -215,7 +205,7 @@ table thead tr td {
     position: relative;
     display: inline-block;
     margin-left: 10%;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 .submenu-trigger:hover{
     cursor: pointer;

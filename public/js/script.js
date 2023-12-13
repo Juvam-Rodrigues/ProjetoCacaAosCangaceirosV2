@@ -8,7 +8,10 @@ let dicas = document.getElementById("dicas");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
+
+//Sons
 let audioTiro = new Audio("../sons/SomDeTiro.mp3");
+let audioVida = new Audio("../sons/effectcoin.mp3");
 
 let apertouMenu = false;
 
@@ -32,6 +35,7 @@ setInterval(() => {
         telaVida.innerHTML = vidas;
         if (acertoVid == 5) {
             vidas += 1;
+            audioVida.play();
             acertoVid = 0;
             var intervalo = setInterval(function () {
                 dicas.innerHTML = "Vida extra ganha!";
