@@ -22,15 +22,27 @@
 
     <div id="container">
         @if (session()->has('msg'))
-            <div id="divConfirmacaoRegistro">
-                <div id="textoModal">
+            <div class="divConfirmacaoRegistro" id="modal1">
+                <div class="textoModal">
                     Dados inseridos com sucesso, logue pela primeira vez!
                 </div>
-                <div id="btnModal">
-                    <button onclick="fecharModal()">Fechar</button>
+                <div class="divBtnModal">
+                    <button onclick="fecharModal('modal1')">Fechar</button>
                 </div>
             </div>
         @endif
+
+        @if (session()->has('mensagem'))
+            <div class="divConfirmacaoRegistro" id="modal2">
+                <div class="textoModal">
+                    Insira os dados corretamente ou crie uma conta.
+                </div>
+                <div class="divBtnModal">
+                    <button onclick="fecharModal('modal2')">Fechar</button>
+                </div>
+            </div>
+        @endif
+
 
         <form action="/logar" method="POST" id="formlogin">
             {{ csrf_field() }}

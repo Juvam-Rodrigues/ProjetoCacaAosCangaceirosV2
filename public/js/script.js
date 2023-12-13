@@ -10,12 +10,7 @@ let estaClicado = false;
 let gameOver = false;
 let audioTiro = new Audio("../sons/SomDeTiro.mp3");
 
-let botaoSubMenu = document.getElementById("submenu-trigger");
-let submenu =  document.getElementById("submenu");
 let apertouMenu = false;
-
-//Modal
-let divModal = document.getElementById("divConfirmacaoRegistro");
 
 
 //Pegando o Height e Widht
@@ -62,7 +57,9 @@ setInterval(() => {
     }
 }, 1000);
 
-botaoSubMenu.onclick = function(){
+function submenuAbrir(){
+    let submenu =  document.getElementById("submenu");
+ 
     if(apertouMenu == false){
         submenu.style.display = "block";
         apertouMenu = true;
@@ -142,6 +139,8 @@ window.onload = function () {
     startTempo(duracao, telaDeTempo);
 }
 
-function fecharModal(){
-    divModal.style.display = "none";
+function fecharModal(divModal){
+    let div = document.getElementById(divModal);
+
+    div.style.display = "none";
 }

@@ -19,7 +19,7 @@
         <a href="/partidas" class="btn conteudoHeader">Jogo</a>
         <a href="/prejogo" class="btn conteudoHeader" id="enredobtn">Enredo do jogo</a>
         <a href="/ranking" class="btn conteudoHeader">Ranking</a>
-        <div class="submenu-trigger btn conteudoHeader" id="submenu-trigger">
+        <div class="submenu-trigger btn conteudoHeader" id="submenu-trigger" onclick="submenuAbrir()">
             <span> {{ session()->get('jogador')->nome }} </span>
             <div class="submenu" id="submenu">
                 <a href="/deslogar">Deslogar</a>

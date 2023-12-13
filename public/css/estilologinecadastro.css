@@ -124,7 +124,7 @@ header {
     border-radius: 5px;
 }
 
-#divConfirmacaoRegistro {
+.divConfirmacaoRegistro {
     position: fixed;
     background-color: white;
     border: 1px solid black;
@@ -132,10 +132,10 @@ header {
     padding: 6%;   
 }
 
-#btnModal{
+.divBtnModal{
     margin-top: 20px;
 }
-#btnModal button{
+.divBtnModal button{
     font-family: "fonteTitulo";
     color: rgb(0, 0, 0);
     padding: 10px;
@@ -144,7 +144,7 @@ header {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
-#btnModal button:hover{
+.divBtnModal button:hover{
     font-family: "fonteTitulo";
     color: white;
     padding: 10px;
@@ -153,7 +153,7 @@ header {
     border-radius: 5px;
     background-color: green;
 }
-#textoModal{
+.textoModal{
     font-family: "fonteTitulo";
     font-size: 18px;
 }

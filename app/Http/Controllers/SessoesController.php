@@ -20,7 +20,7 @@ class SessoesController extends Controller
         if($comparacao==true){
             return redirect("/partidas");
         }else{
-            return redirect("/");
+            return redirect("/")->with('mensagem', 'Insira os dados corretamente ou crie uma conta.');;
         }
 
     }

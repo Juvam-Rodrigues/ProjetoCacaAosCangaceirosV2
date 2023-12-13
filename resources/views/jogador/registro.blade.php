@@ -22,12 +22,12 @@
 
     <div id="container">
         @if (session()->has('msg'))
-            <div id="divConfirmacaoRegistro">
-                <div id="textoModal">
+            <div class="divConfirmacaoRegistro" id="modal3">
+                <div class="textoModal">
                     Dados inseridos incorretamente!
                 </div>
-                <div id="btnModal">
-                    <button onclick="fecharModal()">Fechar</button>
+                <div class="divBtnModal">
+                    <button onclick="fecharModal('modal3')">Fechar</button>
                 </div>
             </div>
         @endif
