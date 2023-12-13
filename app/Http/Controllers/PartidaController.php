@@ -31,7 +31,6 @@ class PartidaController extends Controller
             $acertos = (int) $request->route('acertos');
             $erros = (int) $request->route('erros');
             $jogador->criarPartida($acertos, $erros);
-            return redirect("/partidas");
         }
     }
 }
