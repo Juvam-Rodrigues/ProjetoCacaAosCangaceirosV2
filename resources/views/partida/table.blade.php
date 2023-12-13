@@ -40,14 +40,14 @@
             </thead>
             <tbody>
                 {{-- ORDER BY acertos DESC, data_atual DESC, tempo_atual DESC --}}
-                @foreach (session()->get('jogador')->partidas()->orderBy('acertos', 'desc')->orderBy('data_atual', 'desc')->orderBy('tempo_atual', 'desc')->get() as $partida)
-                <tr>
-                        <td>{{ session()->get('jogador')->id }}</td>
-                        <td>{{ session()->get('jogador')->nome }}</td>
-                        <td>{{ $partida->acertos }}</td>
-                        <td>{{ $partida->erros }}</td>
-                        <td>{{ $partida->data_atual }}</td>
-                        <td>{{ $partida->tempo_atual }}</td>
+                @foreach ($ranking as $item)
+                    <tr>
+                        <td>{{ $item->jogador->id }}</td>
+                        <td>{{ $item->jogador->nome }}</td>
+                        <td>{{ $item->acertos }}</td>
+                        <td>{{ $item->erros }}</td>
+                        <td>{{ $item->ultima_data }}</td>
+                        <td>{{ $item->ultimo_tempo }}</td>
                     </tr>
                 @endforeach
             </tbody>
