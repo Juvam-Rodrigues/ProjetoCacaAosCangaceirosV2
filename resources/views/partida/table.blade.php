@@ -57,7 +57,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- ORDER BY acertos DESC, data_atual DESC, tempo_atual DESC --}}
                     @foreach ($ranking as $item)
                         <tr>
                             <td>{{ $item->jogador->id }}</td>

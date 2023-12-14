@@ -20,6 +20,7 @@ class Partida extends Model
         return self::selectRaw('jogador_id, acertos, erros, MAX(data_atual) as ultima_data, MAX(tempo_atual) as ultimo_tempo')
         ->groupBy('jogador_id')
         ->orderByDesc('acertos')
+        ->orderBy('erros', 'asc')
         ->orderByDesc('ultima_data')
         ->orderByDesc('ultimo_tempo')
         ->get();
