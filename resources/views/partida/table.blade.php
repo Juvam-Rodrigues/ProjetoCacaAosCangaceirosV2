@@ -30,7 +30,7 @@
         <div id="divContainerGameOver">
             <div class="divGameOver" id="modal4">
                 <div class="textoModal">
-                    Você perdeu! Feche esse pop-up e clique em jogo para começar uma nova partida.
+                    Você perdeu! Feche essa pop-up e clique em jogo para começar uma nova partida.
                 </div>
                 <div class="divBtnModal">
                     <button onclick="fecharModal('modal4')">Fechar</button>
@@ -41,7 +41,7 @@
 
     @if (count($ranking) === 0)
         <div id="divSemJogadores">
-            <h1 id="semJogadores">Nenhum resultado encontrado no ranking.</h1>
+            <h1 id="semJogadores">Ainda não ranqueado.</h1>
         </div>
     @else
         <div id="divTable">
