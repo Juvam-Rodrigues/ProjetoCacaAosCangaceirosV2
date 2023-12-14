@@ -237,3 +237,56 @@ table thead tr td {
 .submenu-trigger span{
     font-family: fonteTitulo;
 }
+
+.divGameOver {
+    margin-top: 20%;
+    position: fixed;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 6%;   
+}
+#divContainerGameOver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divBtnModal{
+    margin-top: 20px;
+}
+.divBtnModal button{
+    font-family: "fonteTitulo";
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+.divBtnModal button:hover{
+    font-family: "fonteTitulo";
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: green;
+}
+.textoModal{
+    font-family: "fonteTitulo";
+    font-size: 18px;
+}
+#semJogadores{
+    font-family: fonteTitulo;
+    text-align: center;
+}
+#divSemJogadores{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 3%;
+    margin: 8%;  
+}

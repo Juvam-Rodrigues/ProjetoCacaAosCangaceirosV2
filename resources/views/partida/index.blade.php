@@ -53,7 +53,6 @@
         </div>
     </nav>
 
-
     <div id="container">
         <div id="canvas">
             <div id="telaGame">

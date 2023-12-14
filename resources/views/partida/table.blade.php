@@ -26,34 +26,52 @@
         </div>
     </header>
 
-    <div id="divTable">
-        <table border="1">
-            <thead>
-                <tr>
-                    <td><strong>ID:</strong></td>
-                    <td><strong>Nome:</strong></td>
-                    <td><strong>Acertos:</strong></td>
-                    <td><strong>Erros:</strong></td>
-                    <td><strong>Data atual:</strong></td>
-                    <td><strong>Tempo atual:</strong></td>
-                </tr>
-            </thead>
-            <tbody>
-                {{-- ORDER BY acertos DESC, data_atual DESC, tempo_atual DESC --}}
-                @foreach ($ranking as $item)
-                    <tr>
-                        <td>{{ $item->jogador->id }}</td>
-                        <td>{{ $item->jogador->nome }}</td>
-                        <td>{{ $item->acertos }}</td>
-                        <td>{{ $item->erros }}</td>
-                        <td>{{ $item->ultima_data }}</td>
-                        <td>{{ $item->ultimo_tempo }}</td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
+    @if (session()->has('msg'))
+        <div id="divContainerGameOver">
+            <div class="divGameOver" id="modal4">
+                <div class="textoModal">
+                    Você perdeu! Feche esse pop-up e clique em jogo para começar uma nova partida.
+                </div>
+                <div class="divBtnModal">
+                    <button onclick="fecharModal('modal4')">Fechar</button>
+                </div>
+            </div>
+        </div>
+    @endif
 
+    @if (count($ranking) === 0)
+        <div id="divSemJogadores">
+            <h1 id="semJogadores">Nenhum resultado encontrado no ranking.</h1>
+        </div>
+    @else
+        <div id="divTable">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td><strong>ID:</strong></td>
+                        <td><strong>Nome:</strong></td>
+                        <td><strong>Acertos:</strong></td>
+                        <td><strong>Erros:</strong></td>
+                        <td><strong>Data atual:</strong></td>
+                        <td><strong>Tempo atual:</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{-- ORDER BY acertos DESC, data_atual DESC, tempo_atual DESC --}}
+                    @foreach ($ranking as $item)
+                        <tr>
+                            <td>{{ $item->jogador->id }}</td>
+                            <td>{{ $item->jogador->nome }}</td>
+                            <td>{{ $item->acertos }}</td>
+                            <td>{{ $item->erros }}</td>
+                            <td>{{ $item->ultima_data }}</td>
+                            <td>{{ $item->ultimo_tempo }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    @endif
 
     <footer>
         <div class="creditos">
