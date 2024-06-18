@@ -87,7 +87,7 @@ header {
 }
 
 #formlogin {
-    padding: 4%;
+    padding: 10%;
     display: flex;
     flex-direction: column;
     /* Garante que os itens se empilhem verticalmente */
